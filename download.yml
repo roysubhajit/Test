@@ -1,6 +1,7 @@
-tasks:
-  -name: Test 
-   get_url:
-    url: https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ec2.ini
-    dest: /home/ec2-user/ec2.ini
-    mode: 700
+- hosts: all
+  tasks:
+  - name: Test 
+    get_url:
+     url: https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ec2.ini
+     dest: /home/ec2-user/ec2.ini
+     mode: 700
